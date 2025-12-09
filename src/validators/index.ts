@@ -14,7 +14,7 @@ export const validateRequestBody = (schema: ZodObject) => {
         } catch (error) {
             // If the validation fails, 
 
-            return res.status(400).json({
+            res.status(400).json({
                 message: "Invalid request body",
                 success: false,
                 error: error
