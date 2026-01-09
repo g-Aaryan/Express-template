@@ -4,6 +4,8 @@ import v1router from './router/v1/index.router';
 import v2router from './router/v2/index.router';
 const app = express();
 
+app.use(express.json());
+
 
 app.use('/api/v1',v1router)
 app.use('/api/v2',v2router)
