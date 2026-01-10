@@ -6,7 +6,7 @@ import { pingSchema } from "../../validators/ping.validator";
 
 const pingRouter = express.Router()
 pingRouter.get('/',validateRequestBody(pingSchema),pingHandler);
-pingRouter.get('/health',(req,res)=>{
+pingRouter.get('/health',validateRequestBody(pingSchema),(req,res)=>{
     res.status(200).send('OK')
 }) 
 export default pingRouter;
